@@ -7,6 +7,7 @@ import android.widget.ListView;
 
 import com.example.chayanin.e_books.models.Book;
 import com.example.chayanin.e_books.models.BookRepository;
+import com.example.chayanin.e_books.models.JSONBookRepository;
 import com.example.chayanin.e_books.models.MockUpRepository;
 
 import java.util.ArrayList;
@@ -23,7 +24,8 @@ public class MainActivity extends AppCompatActivity implements MainView {
         setContentView(R.layout.activity_main);
 
         if(presenter == null) {
-            repository = MockUpRepository.getInstance();
+            repository = JSONBookRepository.getInstance();
+            repository.setAllBooks();
             presenter = new MainPresenter(repository, this);
         }
 

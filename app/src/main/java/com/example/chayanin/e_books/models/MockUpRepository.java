@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by Chayanin on 2017-04-20.
  */
 
-public class MockUpRepository implements BookRepository {
+public class MockUpRepository extends BookRepository {
 
     private static MockUpRepository instance;
 
@@ -22,7 +22,7 @@ public class MockUpRepository implements BookRepository {
         return instance;
     }
 
-    private void setAllBooks() {
+    public void setAllBooks() {
         allBooks.add(new Book(
                 "Functional Web Development with Elixir, OTP, and Phoenix",
                 471, 24.95, 2017,

@@ -8,19 +8,19 @@ public class Book {
 
     private String imgUrl;
     private String title;
-    private double prize;
+    private double price;
     private int id;
     private int pubYear;
 
-    public Book(String title, int id, double prize, int pubYear, String imgUrl) {
+    public Book(String title, int id, double price, int pubYear, String imgUrl) {
         this.title = title;
         this.id = id;
-        this.prize = prize;
+        this.price = price;
         this.pubYear = pubYear;
         this.imgUrl = imgUrl;
     }
 
     public String toString() {
-        return id + " " + title + "\nPrize: " + prize;
+        return id + " " + title + "\nPrice: " + price;
     }
 }
